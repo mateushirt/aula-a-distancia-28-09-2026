@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Compilado de algumas meta tags do HTML.">
+	<meta name="author" content="Mateus">
+	<title>Meta tags</title>
+	<style>
+		/* Tentando imitar a Tokyo Night */
+
+		code {
+			background-color: #222;
+			color: #eee;
+			padding: 1px 6px 2px 6px;
+			border-radius: 4px;
+			font-weight: normal;
+		}
+
+		.code {
+			&.reserved-keyword {
+				color: #E9768E;
+			}
+			
+			&.attribute {
+				color: #BB9AF7;
+			}
+			
+			&.text-string {
+				color: #9ECE6A;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Aula à Distância (28/08/2026) - Meta Tags, Elementos e Atributos HTML</h1>
+	</header>
+
+	<main>
+		<article>
+			<h2>Meta tags utilizadas no <code><span class="code reserved-keyword">head</span></code> do HTML</h2>
+
+			<ul>
+				<li>
+					<details>
+						<!-- Charset serve para definir como os caracteres serão exibidos na tela -->
+						<!-- Indica a codificação, a forma que os caracteres da página serão convertidos e entendidos pelo navegador para que possam ser exibidos na tela. Existem diferentes tipos de codificação de caracteres. Alguns exemplos são o UTF-8, o ISO-8859-1 e o Windows-1252. -->
+						<summary>Charset</summary>
+						<p>Indica a codificação, a forma que os caracteres da página serão convertidos e entendidos pelo navegador para que possam ser exibidos na tela. Existem diferentes tipos de codificação de caracteres. Alguns exemplos são o UTF-8, o ISO-8859-1 e o Windows-1252.</p>
+						<p><b>Exemplo:</b> No código <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">charset</span>=<span class="code text-string">"UTF-8"</span>&gt;</code>, é definido que a codificação da página será em UTF-8.</p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Viewport serve para definir como a área visível será utilizada (tamanho que ocupa) -->
+						<!-- Estabelece regras sobre como a viewport (a área visível do documento) deve ser dimensionada -->
+						<summary>Viewport</summary>
+						<p>Estabelece regras sobre como a <i lang="en">viewport</i> (a área visível do documento) deve ser dimensionada</p>
+						<p><b>Exemplo:</b> No código <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"viewport"</span> <span class="code attribute">content</span>=<span class="code text-string">"width=device-width, initial-scale=1.0"</span>&gt;</code> é especificado que o conteúdo visível ficará dentro da largura do dispositivo que está sendo utilizado e que a escala inicial será 100%.</p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Description serve para criar um resumo da página -->
+						<!-- Indica uma descrição ou resumo de uma página, que pode ser utilizado por mecanismos de pesquisa ao indexar uma página. No caso do Google, eles utilizam o conteúdo dessa tag caso compreendam que a descrição fornecida é mais precisa do que apenas uma busca no conteúdo da página. -->
+						<summary>Description</summary>
+						<p>Indica uma descrição ou resumo de uma página, que pode ser utilizado por mecanismos de pesquisa ao indexar uma página. No caso do Google, eles utilizam o conteúdo dessa <i lang="en">tag</i> caso compreendam que a descrição fornecida é mais precisa do que apenas uma busca no conteúdo da página.</p>
+						<p><b>Exemplo:</b> No código <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"description"</span> <span class="code attribute">content</span>=<span class="code text-string">"Compilado de algumas meta tags do HTML."</span>&gt;</code> é dado um resumo da página.</p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Author serve para informar o autor do documento -->
+						<!-- Indica qual é o nome do autor do documento. -->
+						<summary>Author</summary>
+						<p>Indica qual é o nome do autor do documento.</p>
+						<p><b>Exemplo:</b> No código <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"author"</span> <span class="code attribute">content</span>=<span class="code text-string">"Mateus"</span>&gt;</code> é informado o autor do documento atual.</p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- XXXXX -->
+						<!-- XXXXX -->
+						<summary>Open Graph: Title</summary>
+						<p>XXXXX</p>
+						<p><b>Exemplo:</b> No código <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">property</span>=<span class="code text-string">"og:title"</span> <span class="code attribute">content</span>=<span class="code text-string">"XXXXXXXXXXXXXXX"</span>&gt;</code> XXXXX.</p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- XXXXX -->
+						<!-- XXXXX -->
+						<summary>XXXXX</summary>
+						<p>XXXXX</p>
+						<p><b>Exemplo:</b> No código <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">XXXXX</span>=<span class="code text-string">"XXXXX"</span> <span class="code attribute">XXXXX</span>=<span class="code text-string">"XXXXX"</span>&gt;</code> XXXXX.</p>
+					</details>
+				</li>
+			</ul>
+		</article>
+	</main>
+
+	<aside>
+		<h2>Referências</h2>
+		<p>As informações aqui presentes foram obtidas por meio de:</p>
+		<ul>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta">Mozilla MDN</a></li>
+			<li><a href="https://www.w3schools.com/html/default.asp">W3Schools</a></li>
+			<li><a href="https://developers.google.com/search/docs/appearance/snippet?hl=pt-br">Google Search Central</a></li>
+			<li><a href="https://medium.com/geekculture/open-graph-tags-in-html-101-5d470bbdb78a">Medium</a></li>
+		</ul>
+	</aside>
+
+	<footer><!-- ... --></footer>
+</body>
+</html>
