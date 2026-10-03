@@ -4,9 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Compilado de algumas meta tags do HTML.">
-	<meta name="author" content="Mateus">
+	<meta name="author" content="Mateus Hirt">
+	<meta property="og:title" content="Aula à Distância (28/08/2026) - Meta Tags, Elementos e Atributos HTML">
+	<meta property="og:description" content="Compilado de algumas meta tags do HTML.">
+	<meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQawxMRxFHpyJBBUymLu0Rm4VP3nxJEn0BkSpkjftbtFBACSfEEqj5xrV4&s=10">
+	<meta property="og:url" content="#">
 	<title>Meta tags</title>
 	<style>
+		:root {
+			font-family: Arial, sans-serif;
+		}
+
 		/* Tentando imitar a Tokyo Night */
 
 		code {
@@ -81,14 +89,43 @@
 						<p><b>Exemplo:</b> No código <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"author"</span> <span class="code attribute">content</span>=<span class="code text-string">"Mateus"</span>&gt;</code> é informado o autor do documento atual.</p>
 					</details>
 				</li>
+			</ul>
+		</article>
+		
+		<article>
+			<h2>Meta tags Open Graph utilizadas no <code><span class="code reserved-keyword">head</span></code> do HTML</h2>
+
+			<img src="img/OG.jpg" alt="" width="500" height="250">
+			<img src="img/OG_code.jpg" alt="" width="500" height="250">
+
+			<ul>
+				<li>
+					<details>
+						<!-- Open Graph Title define qual será o título da página quando estiver sendo citada por outro aplicativo -->
+						<!-- Define o que terá no campo de título quando a página é mencionada por outro aplicativo (como uma rede social). -->
+						<summary>Open Graph: Title</summary>
+						<p>Define o que terá no campo de título quando a página é mencionada por outro aplicativo (como uma rede social).</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">property</span>=<span class="code text-string">"og:title"</span> <span class="code attribute">content</span>=<span class="code text-string">"Dinamarca se preparou para invasão dos EUA à Groenlândia | G1"</span>&gt;</code></p>
+					</details>
+				</li>
 
 				<li>
 					<details>
-						<!-- XXXXX -->
-						<!-- XXXXX -->
-						<summary>Open Graph: Title</summary>
-						<p>XXXXX</p>
-						<p><b>Exemplo:</b> No código <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">property</span>=<span class="code text-string">"og:title"</span> <span class="code attribute">content</span>=<span class="code text-string">"XXXXXXXXXXXXXXX"</span>&gt;</code> XXXXX.</p>
+						<!-- Open Graph Description define qual será a descrição da página quando estiver sendo citada por outro aplicativo -->
+						<!-- Define o que terá no campo de descrição quando a página é mencionada por outro aplicativo (como uma rede social). -->
+						<summary>Open Graph: Description</summary>
+						<p>Define o que terá no campo de descrição quando a página é mencionada por outro aplicativo (como uma rede social).</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">property</span>=<span class="code text-string">"og:description"</span> <span class="code attribute">content</span>=<span class="code text-string">"Plano de contingência revelado por emissora pública mostra que reino levou a sério ameaças de Trump de anexar ilha do Ártico."</span>&gt;</code></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Open Graph Image define qual será a imagem da página quando estiver sendo citada por outro aplicativo -->
+						<!-- Define o que terá no campo de imagem quando a página é mencionada por outro aplicativo (como uma rede social). -->
+						<summary>Open Graph: Image</summary>
+						<p>Define o que terá no campo de imagem quando a página é mencionada por outro aplicativo (como uma rede social).</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">property</span>=<span class="code text-string">"og:image"</span> <span class="code attribute">content</span>=<span class="code text-string">"https://s04.video.glbimg.com/x720/992055.jpg"</span>&gt;</code></p>
 					</details>
 				</li>
 
@@ -96,15 +133,15 @@
 					<details>
 						<!-- XXXXX -->
 						<!-- XXXXX -->
-						<summary>XXXXX</summary>
-						<p>XXXXX</p>
-						<p><b>Exemplo:</b> No código <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">XXXXX</span>=<span class="code text-string">"XXXXX"</span> <span class="code attribute">XXXXX</span>=<span class="code text-string">"XXXXX"</span>&gt;</code> XXXXX.</p>
+						<summary>Open Graph: URL</summary>
+						<p>Define o que terá no campo de URL quando a página é mencionada por outro aplicativo (como uma rede social). Ele indica qual é o link (URL) original da página.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">property</span>=<span class="code text-string">"og:url"</span> <span class="code attribute">content</span>=<span class="code text-string">"https://g1.globo.com/mundo/blog/sandra-cohen/post/2026/03/20/dinamarca-enviou-explosivos-a-groenlandia-para-destruir-pistas-de-pouso-em-caso-de-invasao-dos-eua.ghtml"</span>&gt;</code></p>
 					</details>
 				</li>
 			</ul>
 		</article>
 	</main>
-
+	
 	<aside>
 		<h2>Referências</h2>
 		<p>As informações aqui presentes foram obtidas por meio de:</p>
