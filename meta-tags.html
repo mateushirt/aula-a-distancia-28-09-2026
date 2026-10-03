@@ -2,24 +2,34 @@
 <html lang="pt-BR">
 <head>
 	<meta charset="UTF-8">
+	<meta name="author" content="Mateus Hirt">
+	<meta name="theme-color" content="#E9768E">
+	<meta name="color-scheme" content="only light">
+	<link rel="icon" type="image/svg+xml" href="icon.svg">
+	<meta name="keywords" content="Tags HTML, meta, cabeçalho">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Compilado de algumas meta tags do HTML.">
-	<meta name="author" content="Mateus Hirt">
-	<meta property="og:title" content="Aula à Distância (28/08/2026) - Meta Tags, Elementos e Atributos HTML">
 	<meta property="og:description" content="Compilado de algumas meta tags do HTML.">
+	<meta property="og:url" content="https://meta-tags-e-formularios.vercel.app/meta-tags.html">
+	<meta property="og:title" content="Aula à Distância (28/08/2026) - Meta Tags, Elementos e Atributos HTML">
 	<meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQawxMRxFHpyJBBUymLu0Rm4VP3nxJEn0BkSpkjftbtFBACSfEEqj5xrV4&s=10">
-	<meta property="og:url" content="#">
 	<title>Meta tags</title>
 	<style>
 		:root {
 			font-family: Arial, sans-serif;
 		}
 
-		/* Tentando imitar a Tokyo Night */
+		article {
+			max-width: 1000px;
+			background-color: azure;
+			padding: 10px;
+			margin-bottom: 5px;
+		}
 
+		/* Tentando imitar o tema Tokyo Night */
 		code {
 			background-color: #222;
-			color: #eee;
+			color: #89DDFF;
 			padding: 1px 6px 2px 6px;
 			border-radius: 4px;
 			font-weight: normal;
@@ -43,15 +53,21 @@
 <body>
 	<header>
 		<h1>Aula à Distância (28/08/2026) - Meta Tags, Elementos e Atributos HTML</h1>
+		
+		<nav>
+			<a href="index.html">Página inicial</a>
+			<a href="meta-tags.html">Meta tags</a>
+			<a href="formularios.html">Formulários</a>
+		</nav>
 	</header>
 
 	<main>
 		<article>
-			<h2>Meta tags utilizadas no <code><span class="code reserved-keyword">head</span></code> do HTML</h2>
+			<h2><i lang="en">Meta tags</i> utilizadas no <code><span class="code reserved-keyword">head</span></code> do HTML</h2>
 
 			<ul>
 				<li>
-					<details>
+					<details open>
 						<!-- Charset serve para definir como os caracteres serão exibidos na tela -->
 						<!-- Indica a codificação, a forma que os caracteres da página serão convertidos e entendidos pelo navegador para que possam ser exibidos na tela. Existem diferentes tipos de codificação de caracteres. Alguns exemplos são o UTF-8, o ISO-8859-1 e o Windows-1252. -->
 						<summary>Charset</summary>
@@ -93,14 +109,11 @@
 		</article>
 		
 		<article>
-			<h2>Meta tags Open Graph utilizadas no <code><span class="code reserved-keyword">head</span></code> do HTML</h2>
-
-			<img src="img/OG.jpg" alt="" width="500" height="250">
-			<img src="img/OG_code.jpg" alt="" width="500" height="250">
+			<h2>Propriedades Open Graph utilizadas no <code><span class="code reserved-keyword">head</span></code> do HTML</h2>
 
 			<ul>
 				<li>
-					<details>
+					<details open>
 						<!-- Open Graph Title define qual será o título da página quando estiver sendo citada por outro aplicativo -->
 						<!-- Define o que terá no campo de título quando a página é mencionada por outro aplicativo (como uma rede social). -->
 						<summary>Open Graph: Title</summary>
@@ -131,11 +144,110 @@
 
 				<li>
 					<details>
-						<!-- XXXXX -->
-						<!-- XXXXX -->
+						<!-- Open Graph Image define qual será a URL da página quando estiver sendo citada por outro aplicativo -->
+						<!-- Define o que terá no campo de URL quando a página é mencionada por outro aplicativo (como uma rede social). Ele indica qual é o link (URL) original da página. -->
 						<summary>Open Graph: URL</summary>
 						<p>Define o que terá no campo de URL quando a página é mencionada por outro aplicativo (como uma rede social). Ele indica qual é o link (URL) original da página.</p>
 						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">property</span>=<span class="code text-string">"og:url"</span> <span class="code attribute">content</span>=<span class="code text-string">"https://g1.globo.com/mundo/blog/sandra-cohen/post/2026/03/20/dinamarca-enviou-explosivos-a-groenlandia-para-destruir-pistas-de-pouso-em-caso-de-invasao-dos-eua.ghtml"</span>&gt;</code></p>
+					</details>
+				</li>
+			</ul>
+
+			<img src="img/OG.jpg" alt="Print da rede social Discord mostrando como links aparecem" width="400">
+			<img src="img/OG_code.jpg" alt="Print das ferramentas de desenvolvedor (F12) mostrando a posição das propriedades Open Graph diretamente no código da página" width="500">
+		</article>
+		
+		<article>
+			<h2>Outras <i lang="en">meta tags</i> utilizadas no <code><span class="code reserved-keyword">head</span></code> do HTML (+ ícone)</h2>
+
+			<ul>
+				<li>
+					<details open>
+						<!-- Define o que da URL será compartilhado com outro documento -->
+						<!-- Controla o conteúdo do header HTTP com um HTTP referer anexado a qualquer pedido que o documento enviar. Seu conteúdo define o quanto da URL do documento é compartilhada. -->
+						<summary>Referrer</summary>
+						<p>Controla o conteúdo do <i lang="en">header</i> HTTP com um HTTP <i lang="en">referer</i> anexado a qualquer pedido que o documento enviar. Seu conteúdo define o quanto da URL do documento é compartilhada.</p>
+						<p><b>Exemplos:</b></p>
+						<p>Considere a URL <a href="https://www.google.com/search?q=teste">https://www.google.com/search?q=teste</a>, sua "origem" será apenas <a href="https://www.google.com/search">https://www.google.com</a>, sem as demais informações da URL.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"referrer"</span> <span class="code attribute">content</span>=<span class="code text-string">"origin"</span>&gt;</code> apenas vai compartilhar a origem do documento.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"referrer"</span> <span class="code attribute">content</span>=<span class="code text-string">"no-referrer-when-downgrade"</span>&gt;</code> apenas vai compartilhar a URL se a segurança se manter ou for melhorada (https &rarr; https, http &rarr; http, http &rarr; https). Nas demais situações, não envia nenhum HTTP <i lang="en">referer</i>.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"referrer"</span> <span class="code attribute">content</span>=<span class="code text-string">"origin-when-crossorigin"</span>&gt;</code> envia a URL completa se a solicitação for da mesma origem, mas envia apenas a origem para os demais casos.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"referrer"</span> <span class="code attribute">content</span>=<span class="code text-string">"unsafe-URL"</span>&gt;</code> envia a URL completa.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"referrer"</span> <span class="code attribute">content</span>=<span class="code text-string">"no-referrer"</span>&gt;</code> não envia nenhum HTTP <i lang="en">referer</i>.</p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Estabelece as origens de informação que o documento pode aceitar. -->
+						<!-- Trata-se de uma camada de segurança a mais para o documento, facilitando a detecção e mitigação de determinados tipos de ataque. Ela estabelece uma listagem de origens de informação permitidas. -->
+						<summary>Content Security Policy</summary>
+						<p>Trata-se de uma camada de segurança a mais para o documento, facilitando a detecção e mitigação de determinados tipos de ataque. Ela estabelece uma listagem de origens de informação permitidas.</p>
+						<p>Utiliza <code class="code attribute">http-equiv</code> ao invés de <code class="code attribute">name</code> pois simula cabeçalhos HTTP diretamente no código da página.</p>
+						<p><b>Exemplo:</b> O código <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">http-equiv</span>=<span class="code text-string">"Content-Security-Policy"</span> <span class="code attribute">content</span>=<span class="code text-string">"default-src 'self'; img-src https://*"</span>&gt;</code> estabelece que todo conteúdo deve vir da mesma origem (<code class="code text-string">"default-src 'self'"</code>) e que suas imagens devem vir de sites https (<code class="code text-string">"img-src https://*"</code>).</p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Diz aos robôs que entrarem na página o que eles podem fazer e pede para que não façam determinadas ações -->
+						<!-- Define o comportamento que crawler indexers (rastreadores de indexação), também conhecidos como robots (robôs), podem ter dentro da página e se ela deve ou não ser indexada. -->
+						<summary>Robots</summary>
+						<p>Define o comportamento que <i lang="en">crawler indexers</i> (rastreadores de indexação), também conhecidos como <i lang="en">robots</i> (robôs), podem ter dentro da página e se ela deve ou não ser indexada.</p>
+						<p><b>Exemplos:</b></p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"index"</span>&gt;</code> permite aos robôs indexar a página.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"noindex"</span>&gt;</code> pede aos robôs para não indexar a página.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"follow"</span>&gt;</code> permite aos robôs seguir os links que estão na página.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"nofollow"</span>&gt;</code> pede aos robôs para não seguir os links da página.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"all"</span>&gt;</code> equivale ao <code class="code text-string">"index"</code> e <code class="code text-string">"follow"</code> juntos.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"none"</span>&gt;</code> equivale ao <code class="code text-string">"noindex"</code> e <code class="code text-string">"nofollow"</code> juntos.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"noarchive"</span>&gt;</code> pede aos robôs para não armazenar a página em <i lang="en">cache</i>. Também pode ser substituído por <code class="code text-string">"nocache"</code>.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"nosnippet"</span>&gt;</code> previne que quaisquer descrições da página apareça em resultados de ferramentas de pesquisa.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"noimageindex"</span>&gt;</code> pede para que o documento não seja referenciado quando uma imagem for indexada.</p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Define palavras-chave para mecanismos de pesquisa. -->
+						<!-- Define palavras-chave para mecanismos de pesquisa. -->
+						<summary>Keywords</summary>
+						<p>Define palavras-chave para mecanismos de pesquisa.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"keywords"</span> <span class="code attribute">content</span>=<span class="code text-string">"Tags HTML, meta, cabeçalho"</span>&gt;</code></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Muda a cor da interface do aplicativo ao acessar o documento. -->
+						<!-- Indica uma sugestão de cor para que os navegadores ou demais interfaces usem ao acessar a página. É ele quem faz o navegador do celular mudar de cor. -->
+						<summary>Theme Color</summary>
+						<p>Indica uma sugestão de cor para que os navegadores ou demais interfaces usem ao acessar a página. É ele quem faz o navegador do celular mudar de cor.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"theme-color"</span> <span class="code attribute">content</span>=<span class="code text-string">"#E9768E"</span>&gt;</code></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Indica qual o esquema de cor da página. -->
+						<!-- Indica uma sugestão de esquema de cor para que os navegadores ou demais interfaces usem para a página. -->
+						<summary>Color Scheme</summary>
+						<p>Indica uma sugestão de esquema de cor para que os navegadores ou demais interfaces usem para a página.</p>
+						<p><b>Exemplos:</b></p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"color-scheme"</span> <span class="code attribute">content</span>=<span class="code text-string">"normal"</span>&gt;</code> indica que não há conhecimento da existência de esquemas de cor, e que então deve ser utilizado o esquema padrão.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"color-scheme"</span> <span class="code attribute">content</span>=<span class="code text-string">"light"</span>&gt;</code> indica que aquele documento suporta o esquema claro (se informado <code class="code text-string">"dark"</code>, indica que suporta o esquema escuro). Caso constem dois nomes (<code class="code text-string">"light dark"</code>/<code class="code text-string">"dark light"</code>), indica que ambos os esquemas são suportados, mas que preferencialmente deve-se utilizar o primeiro.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"color-scheme"</span> <span class="code attribute">content</span>=<span class="code text-string">"only light"</span>&gt;</code> indica que aquele documento suporta apenas o esquema claro. O <code class="code text-string">"only dark"</code> é inválido, pois forçar um equema escuro quando o navegar não o suporta pode ocasionar problemas de leitura do conteúdo (todos os maiores navegadores suportam o esquema claro).</p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Define o ícone da página. -->
+						<!-- Define qual o ícone da página. É ele quem define o ícone que aparece nos sites favoritos/salvos no navegador. -->
+						<summary>Favicon</summary>
+						<p>Não é uma meta tag, mas sim um link. Isso pois não define informações sobre o documento, mas sim conecta ele a um arquivo.</p>
+						<p>Define qual o ícone da página. É ele quem define o ícone que aparece nos sites favoritos/salvos no navegador.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">link</span> <span class="code attribute">rel</span>=<span class="code text-string">"icon"</span> <span class="code attribute">type</span>=<span class="code text-string">"image/x-icon"</span> <span class="code attribute">href</span>=<span class="code text-string">"icon.png"</span>&gt;</code></p>
 					</details>
 				</li>
 			</ul>
