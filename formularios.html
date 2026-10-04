@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles.css">
+	<meta name="author" content="Mateus Hirt">
+	<meta name="theme-color" content="#E9768E">
+	<meta name="color-scheme" content="only light">
+	<link rel="icon" type="image/svg+xml" href="icon.svg">
+	<meta name="keywords" content="############################################################">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="############################################################">
+	<meta property="og:description" content="############################################################">
+	<meta property="og:url" content="https://meta-tags-e-formularios.vercel.app/formularios.html">
+	<meta property="og:title" content="Aula à Distância (28/08/2026) - Meta Tags, Elementos e Atributos HTML">
+	<meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQawxMRxFHpyJBBUymLu0Rm4VP3nxJEn0BkSpkjftbtFBACSfEEqj5xrV4&s=10">
+	<title>Formulário HTML</title>
+</head>
+<body>
+	<header>
+		<h1>Aula à Distância (28/08/2026) - Meta Tags, Elementos e Atributos HTML</h1>
+		
+		<nav>
+			<a href="index.html">Página inicial</a>
+			<a href="meta-tags.html">Meta tags</a>
+			<a href="formularios.html">Formulários</a>
+		</nav>
+	</header>
+
+	<main>
+		<article>
+			<h2>Tipos do elemento <code><span class="code reserved-keyword">input</span></code></h2>
+			<ul>
+				<li>
+					<details>
+						<!-- Seletor de cores -->
+						<!-- Cria um seletor de cores para que a pessoa escolha uma cor. O valor selecionado é fornecido, normalmente, no formato hexadecimal, como "#ff0000". -->
+						<summary>Color</summary>
+						<p>Cria um seletor de cores para que a pessoa escolha uma cor. O valor selecionado é fornecido, normalmente, no formato hexadecimal, como <code class="code text-string">"#ff0000"</code>.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"color"</span> <span class="code attribute">name</span>=<span class="code text-string">"cor-favorita"</span> <span class="code attribute">value</span>=<span class="code text-string">"#9ECE6A"</span>&gt;</code> inicia com um tom de verde-lima selecionado.</p>
+						<p><b>Vendo na prática:</b> <input type="color" name="cor-favorita" value="#9ECE6A"></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Seletor de datas -->
+						<!-- Cria um campo para selecionar uma data, sem horário. O navegador pode apresentar um calendário, e o valor é enviado no formato ano-mês-dia (AAAA-MM-DD). -->
+						<summary>Date</summary>
+						<p>Cria um campo para selecionar uma data, sem horário. O navegador pode apresentar um calendário, e o valor é enviado no formato ano-mês-dia (<code class="code text-string">AAAA-MM-DD</code>).</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"date"</span> <span class="code attribute">name</span>=<span class="code text-string">"nascimento"</span>&gt;</code> permite informar uma data de nascimento.</p>
+						<p><b>Vendo na prática:</b> <input type="date" name="nascimento"></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Seletor de data e horário -->
+						<!-- Cria um campo para selecionar uma data e um horário local. O valor segue o formato AAAA-MM-DDTHH:MM e não inclui informação de fuso horário. -->
+						<summary>Datetime-local</summary>
+						<p>Cria um campo para selecionar uma data e um horário local. O valor segue o formato <code class="code text-string">AAAA-MM-DDTHH:MM</code> e não inclui informação de fuso horário.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"datetime-local"</span> <span class="code attribute">name</span>=<span class="code text-string">"agendamento"</span>&gt;</code> permite informar a data e o horário de um agendamento.</p>
+						<p><b>Vendo na prática:</b> <input type="datetime-local" name="agendamento"></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Campo de e-mail -->
+						<!-- Cria um campo para informar um endereço de e-mail. O navegador pode verificar se o valor tem um formato válido, mas essa validação não confirma que o endereço existe nem substitui a validação no servidor. -->
+						<summary>Email</summary>
+						<p>Cria um campo para informar um endereço de e-mail. O navegador pode verificar se o valor tem um formato válido, mas essa validação não confirma que o endereço existe nem substitui a validação no servidor.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"email"</span> <span class="code attribute">name</span>=<span class="code text-string">"email"</span> <span class="code attribute">required</span>&gt;</code> solicita um e-mail obrigatório (todo <code class="code reserved-keyword">input</code> que conter <code class="code attribute">required</code> é um campo de preenchimento obrigatório).</p>
+
+						<form action="" id="email">
+							<p><b>Vendo na prática:</b> <input type="email" name="email" form="email" required> <input type="submit" form="email" value="Testar &quot;required&quot;"></p>
+						</form>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Seletor de arquivos -->
+						<!-- Cria um campo para selecionar um ou mais arquivos do dispositivo. O atributo accept pode indicar os tipos de arquivo esperados, mas a verificação do arquivo também deve ser feita no servidor. -->
+						<summary>File</summary>
+						<p>Cria um campo para selecionar um ou mais arquivos do dispositivo. O atributo <code class="code attribute">accept</code> pode indicar os tipos de arquivo esperados, mas a verificação do arquivo também deve ser feita no servidor.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"file"</span> <span class="code attribute">name</span>=<span class="code text-string">"documento"</span> <span class="code attribute">accept</span>=<span class="code text-string">".pdf"</span>&gt;</code> permite selecionar um arquivo PDF.</p>
+
+						<p><b>Vendo na prática:</b> <input type="file" name="documento" accept=".pdf"></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Campo oculto -->
+						<!-- Armazena um valor que é enviado com o formulário, mas não aparece como um campo editável na página. Como o valor pode ser visto e alterado por quem usa o navegador, ele não deve ser usado para guardar informações secretas nem ser considerado confiável. -->
+						<summary>Hidden</summary>
+						<p>Armazena um valor que é enviado com o formulário, mas não aparece como um campo editável na página. Como o valor pode ser visto e alterado por quem usa o navegador, ele não deve ser usado para guardar informações secretas nem ser considerado confiável.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"hidden"</span> <span class="code attribute">name</span>=<span class="code text-string">"origem"</span> <span class="code attribute">value</span>=<span class="code text-string">"pagina-inicial"</span>&gt;</code> envia o valor <code class="code text-string">"pagina-inicial"</code> sem exibir um campo para a pessoa.</p>
+
+						<p><b>Vendo na prática:</b> <input type="hidden" name="origem" value="pagina-inicial"> <em>(o campo existe, mas não aparece)</em></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Botão de envio com imagem -->
+						<!-- Cria um botão de envio de formulário apresentado como uma imagem. O atributo src indica a imagem e o atributo alt fornece um texto alternativo. -->
+						<summary>Image</summary>
+						<p>Cria um botão de envio de formulário apresentado como uma imagem. O atributo <code class="code attribute">src</code> indica a imagem e o atributo <code class="code attribute">alt</code> fornece um texto alternativo. Ao enviar, o navegador também pode incluir as coordenadas do clique.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"image"</span> <span class="code attribute">src</span>=<span class="code text-string">"enviar.png"</span> <span class="code attribute">alt</span>=<span class="code text-string">"Enviar formulário"</span>&gt;</code> exibe uma imagem que envia o formulário quando acionada.</p>
+
+						<form action="" id="image">
+							<b>Vendo na prática:</b>
+							<input type="image" src="icon.svg" alt="Enviar formulário" width="50" height="50" form="image">
+						</form>
+
+						<p>Ao clicar na imagem, as coordenadas do clique vão para a URL. X e Y são zero no canto superior esquerdo.</p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Seletor de mês -->
+						<!-- Cria um campo para selecionar um mês e um ano, sem indicar um dia específico. -->
+						<summary>Month</summary>
+						<p>Cria um campo para selecionar um mês e um ano, sem indicar um dia específico. O valor segue o formato <code class="code text-string">AAAA-MM</code>.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"month"</span> <span class="code attribute">name</span>=<span class="code text-string">"validade"</span>&gt;</code> permite informar um mês e um ano.</p>
+						<p><b>Vendo na prática:</b> <input type="month" name="validade"></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Campo numérico -->
+						<!-- Cria um campo para inserir um número e permite definir limites e intervalos. -->
+						<summary>Number</summary>
+						<p>Cria um campo para inserir um número. Os atributos <code class="code attribute">min</code>, <code class="code attribute">max</code> e <code class="code attribute">step</code> podem definir valores mínimo, máximo e o intervalo permitido.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"number"</span> <span class="code attribute">name</span>=<span class="code text-string">"quantidade"</span> <span class="code attribute">min</span>=<span class="code text-string">"1"</span> <span class="code attribute">max</span>=<span class="code text-string">"10"</span> <span class="code attribute">step</span>=<span class="code text-string">"1"</span>&gt;</code> aceita números inteiros de 1 a 10.</p>
+						<p><b>Vendo na prática:</b> <input type="number" name="quantidade" min="1" max="10" step="1"></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Controle deslizante -->
+						<!-- Cria um controle deslizante para escolher um valor numérico dentro de um intervalo. -->
+						<summary>Range</summary>
+						<p>Cria um controle deslizante para escolher um valor numérico dentro de um intervalo. Os atributos <code class="code attribute">min</code>, <code class="code attribute">max</code> e <code class="code attribute">step</code> definem os limites e o intervalo dos valores.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"range"</span> <span class="code attribute">name</span>=<span class="code text-string">"volume"</span> <span class="code attribute">min</span>=<span class="code text-string">"0"</span> <span class="code attribute">max</span>=<span class="code text-string">"100"</span> <span class="code attribute">value</span>=<span class="code text-string">"50"</span>&gt;</code> cria um controle de 0 a 100, iniciado em 50.</p>
+						<p><b>Vendo na prática:</b> <input type="range" name="volume" min="0" max="100" value="50"></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Campo de pesquisa -->
+						<!-- Cria um campo para inserir termos de pesquisa. -->
+						<summary>Search</summary>
+						<p>Cria um campo para inserir termos de pesquisa. Sua apresentação pode variar entre navegadores, e o envio ou a execução da pesquisa precisa ser implementado pela página.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"search"</span> <span class="code attribute">name</span>=<span class="code text-string">"consulta"</span> <span class="code attribute">placeholder</span>=<span class="code text-string">"Pesquisar"</span>&gt;</code> cria um campo para digitar uma consulta.</p>
+						<p><b>Vendo na prática:</b> <input type="search" name="consulta" placeholder="Pesquisar"></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Campo de telefone -->
+						<!-- Cria um campo para informar um número de telefone. -->
+						<summary>Tel</summary>
+						<p>Cria um campo para informar um número de telefone. O navegador pode apresentar um teclado adequado em dispositivos móveis, mas não valida automaticamente um formato específico de telefone.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"tel"</span> <span class="code attribute">name</span>=<span class="code text-string">"telefone"</span> <span class="code attribute">placeholder</span>=<span class="code text-string">"(00) 00000-0000"</span>&gt;</code> apresenta uma dica do formato esperado.</p>
+						<p><b>Vendo na prática:</b> <input type="tel" name="telefone" placeholder="(00) 00000-0000"></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Seletor de horário -->
+						<!-- Cria um campo para selecionar um horário, sem data. -->
+						<summary>Time</summary>
+						<p>Cria um campo para selecionar um horário, sem data. O valor normalmente segue o formato <code class="code text-string">HH:MM</code>; o atributo <code class="code attribute">step</code> pode ajustar o intervalo, em segundos.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"time"</span> <span class="code attribute">name</span>=<span class="code text-string">"hora"</span> <span class="code attribute">min</span>=<span class="code text-string">"09:00"</span> <span class="code attribute">max</span>=<span class="code text-string">"18:00"</span>&gt;</code> limita o horário entre 9h e 18h.</p>
+						<p><b>Vendo na prática:</b> <input type="time" name="hora" min="09:00" max="18:00"></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Campo de endereço web -->
+						<!-- Cria um campo para informar um endereço URL e pode validar seu formato. -->
+						<summary>Url</summary>
+						<p>Cria um campo para informar um endereço URL. O navegador pode verificar se o valor tem formato válido, mas isso não confirma se a página existe ou está acessível.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"url"</span> <span class="code attribute">name</span>=<span class="code text-string">"site"</span> <span class="code attribute">placeholder</span>=<span class="code text-string">"https://exemplo.com"</span>&gt;</code> solicita um endereço de site.</p>
+						<p><b>Vendo na prática:</b> <input type="url" name="site" placeholder="https://exemplo.com"></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Seletor de semana -->
+						<!-- Cria um campo para selecionar uma semana e um ano. -->
+						<summary>Week</summary>
+						<p>Cria um campo para selecionar uma semana e um ano, sem indicar um dia específico. O valor segue o formato <code class="code text-string">AAAA-WNN</code>, em que <code class="code text-string">NN</code> identifica a semana (o <code class="code text-string">W</code> significa <i lang="en">week</i>, semana).</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"week"</span> <span class="code attribute">name</span>=<span class="code text-string">"semana"</span>&gt;</code> permite informar uma semana do ano.</p>
+						<p><b>Vendo na prática:</b> <input type="week" name="semana"></p>
+					</details>
+				</li>
+
+				<li>
+					<details>
+						<!-- Atributos do formulário e de seus campos -->
+						<!-- Definem para onde e como os dados do formulário são enviados e controlam o valor, a edição e o preenchimento de seus campos. -->
+						<summary>Outros atributos</summary>
+						<h3>Atributos de formulário HTML</h3>
+						<p><code class="code attribute">action</code> define o endereço que receberá os dados enviados. <code class="code attribute">target</code> define onde a resposta será aberta, como na aba atual (<code class="code text-string">"_self"</code>) ou em uma nova aba (<code class="code text-string">"_blank"</code>). <code class="code attribute">method</code> define como os dados serão enviados: <code class="code text-string">"get"</code> os inclui na URL, enquanto <code class="code text-string">"post"</code> os envia no corpo da requisição. <code class="code attribute">autocomplete</code> habilita ou desabilita sugestões de preenchimento automático para os campos do formulário.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">form</span> <span class="code attribute">action</span>=<span class="code text-string">"/cadastro"</span> <span class="code attribute">target</span>=<span class="code text-string">"_self"</span> <span class="code attribute">method</span>=<span class="code text-string">"post"</span> <span class="code attribute">autocomplete</span>=<span class="code text-string">"on"</span>&gt;...&lt;/<span class="code reserved-keyword">form</span>&gt;</code></p>
+
+						<h3>Atributos de entrada do formulário</h3>
+						<p><code class="code attribute">value</code> define o valor inicial do campo. <code class="code attribute">readonly</code> impede que a pessoa altere o valor, mas ele continua sendo enviado. <code class="code attribute">disabled</code> desativa o campo, que não pode ser editado nem é enviado junto com o formulário.</p>
+						<p><code class="code attribute">size</code> define a largura visível de campos de texto, medida aproximadamente em caracteres. <code class="code attribute">maxlength</code> limita a quantidade máxima de caracteres digitados em campos compatíveis.</p>
+						<p><code class="code attribute">min</code> e <code class="code attribute">max</code> definem, respectivamente, os valores mínimo e máximo aceitos em tipos compatíveis, como <code class="code text-string">"number"</code> e <code class="code text-string">"date"</code>. <code class="code attribute">multiple</code> permite vários valores em tipos compatíveis, como <code class="code text-string">"email"</code> e <code class="code text-string">"file"</code>.</p>
+						<p><code class="code attribute">placeholder</code> exibe uma dica dentro do campo enquanto ele está vazio; não substitui um rótulo. <code class="code attribute">required</code> torna obrigatório o preenchimento do campo antes do envio. <code class="code attribute">autofocus</code> solicita que o campo receba o foco automaticamente ao abrir a página. <code class="code attribute">autocomplete</code> orienta o navegador sobre preencher um campo automaticamente, por exemplo, com <code class="code text-string">"email"</code> ou <code class="code text-string">"off"</code>.</p>
+						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"text"</span> <span class="code attribute">name</span>=<span class="code text-string">"cidade"</span> <span class="code attribute">value</span>=<span class="code text-string">"São Paulo"</span> <span class="code attribute">readonly</span> <span class="code attribute">size</span>=<span class="code text-string">"20"</span>&gt;</code> apresenta um valor que não pode ser alterado e que será enviado.</p>
+						<p><b>Vendo na prática:</b></p>
+						
+						<form action="" target="_self" method="get" autocomplete="on">
+							<p><label for="atributo-value">value:</label> <input type="text" id="atributo-value" name="value" value="Valor inicial"></p>
+							<p><label for="atributo-readonly">readonly:</label> <input type="text" id="atributo-readonly" name="readonly" value="Não editável, mas enviado" readonly></p>
+							<p><label for="atributo-disabled">disabled:</label> <input type="text" id="atributo-disabled" name="disabled" value="Desativado e não enviado" disabled></p>
+							<p><label for="atributo-size">size e maxlength:</label> <input type="text" id="atributo-size" name="limite" size="20" maxlength="30"></p>
+							<p><label for="atributo-min-max">min e max:</label> <input type="number" id="atributo-min-max" name="idade" min="0" max="120"></p>
+							<p><label for="atributo-multiple">multiple (e-mail):</label> <input type="email" id="atributo-multiple" name="emails" multiple placeholder="email1@exemplo.com, email2@exemplo.com"></p>
+							<p><label for="atributo-placeholder">placeholder:</label> <input type="text" id="atributo-placeholder" name="dica" placeholder="Digite um texto"></p>
+							<p><label for="atributo-required">required:</label> <input type="text" id="atributo-required" name="obrigatorio" required></p>
+							<p><label for="atributo-autofocus">autofocus:</label> <input type="text" id="atributo-autofocus" name="foco" autofocus> <em>(não vai aparecer com foco pois é necessário clicar no</em> <span class="code reserved-keyword">details</span> <em>para que esse campo apareça nesta página)</em></p>
+							<p><label for="atributo-autocomplete">autocomplete:</label> <input type="email" id="atributo-autocomplete" name="contato" autocomplete="email"></p>
+							<p><button type="submit">Enviar demonstração</button></p>
+						</form>
+					</details>
+				</li>
+			</ul>
+		</article>
+	</main>
+
+	<footer><!-- ... --></footer>
+</body>
+</html>

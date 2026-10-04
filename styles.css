@@ -1,0 +1,33 @@
+:root {
+	font-family: Arial, sans-serif;
+}
+
+article {
+	max-width: 1000px;
+	background-color: azure;
+	padding: 10px;
+	margin-bottom: 5px;
+}
+
+/* Tentando imitar o tema Tokyo Night */
+code {
+	background-color: #222;
+	color: #89DDFF;
+	padding: 1px 6px 2px 6px;
+	border-radius: 4px;
+	font-weight: normal;
+}
+
+.code {
+	&.reserved-keyword {
+		color: #E9768E;
+	}
+	
+	&.attribute {
+		color: #BB9AF7;
+	}
+	
+	&.text-string {
+		color: #9ECE6A;
+	}
+}
