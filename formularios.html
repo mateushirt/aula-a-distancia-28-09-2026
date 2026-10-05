@@ -7,10 +7,10 @@
 	<meta name="theme-color" content="#E9768E">
 	<meta name="color-scheme" content="only light">
 	<link rel="icon" type="image/svg+xml" href="icon.svg">
-	<meta name="keywords" content="############################################################">
+	<meta name="keywords" content="Tags HTML, formulários, form">
+	<meta name="description" content="Alguns tipos de input do HTML.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="############################################################">
-	<meta property="og:description" content="############################################################">
+	<meta property="og:description" content="Alguns tipos de input do HTML.">
 	<meta property="og:url" content="https://meta-tags-e-formularios.vercel.app/formularios.html">
 	<meta property="og:title" content="Aula à Distância (28/08/2026) - Meta Tags, Elementos e Atributos HTML">
 	<meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQawxMRxFHpyJBBUymLu0Rm4VP3nxJEn0BkSpkjftbtFBACSfEEqj5xrV4&s=10">
@@ -18,7 +18,7 @@
 </head>
 <body>
 	<header>
-		<h1>Aula à Distância (28/08/2026) - Meta Tags, Elementos e Atributos HTML</h1>
+		<h1>Aula à Distância (28/09/2026) - Meta Tags, Elementos e Atributos HTML</h1>
 		
 		<nav>
 			<a href="index.html">Página inicial</a>
@@ -32,7 +32,7 @@
 			<h2>Tipos do elemento <code><span class="code reserved-keyword">input</span></code></h2>
 			<ul>
 				<li>
-					<details>
+					<details open>
 						<!-- Seletor de cores -->
 						<!-- Cria um seletor de cores para que a pessoa escolha uma cor. O valor selecionado é fornecido, normalmente, no formato hexadecimal, como "#ff0000". -->
 						<summary>Color</summary>
@@ -224,18 +224,38 @@
 						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">input</span> <span class="code attribute">type</span>=<span class="code text-string">"text"</span> <span class="code attribute">name</span>=<span class="code text-string">"cidade"</span> <span class="code attribute">value</span>=<span class="code text-string">"São Paulo"</span> <span class="code attribute">readonly</span> <span class="code attribute">size</span>=<span class="code text-string">"20"</span>&gt;</code> apresenta um valor que não pode ser alterado e que será enviado.</p>
 						<p><b>Vendo na prática:</b></p>
 						
+						<!-- action define o endereço que receberá os dados enviados. target define onde a resposta será aberta, como na aba atual ("_self") ou em uma nova aba ("_blank"). method define como os dados serão enviados: "get" os inclui na URL, enquanto "post" os envia no corpo da requisição. autocomplete habilita ou desabilita sugestões de preenchimento automático para os campos do formulário. -->
 						<form action="" target="_self" method="get" autocomplete="on">
+							<!-- value define o valor inicial do campo. -->
 							<p><label for="atributo-value">value:</label> <input type="text" id="atributo-value" name="value" value="Valor inicial"></p>
+							
+							<!-- readonly impede que a pessoa altere o valor, mas ele continua sendo enviado. -->
 							<p><label for="atributo-readonly">readonly:</label> <input type="text" id="atributo-readonly" name="readonly" value="Não editável, mas enviado" readonly></p>
+							
+							<!-- disabled desativa o campo, que não pode ser editado nem é enviado junto com o formulário. -->
 							<p><label for="atributo-disabled">disabled:</label> <input type="text" id="atributo-disabled" name="disabled" value="Desativado e não enviado" disabled></p>
+							
+							<!-- size define a largura visível de campos de texto, medida aproximadamente em caracteres. maxlength limita a quantidade máxima de caracteres digitados em campos compatíveis. -->
 							<p><label for="atributo-size">size e maxlength:</label> <input type="text" id="atributo-size" name="limite" size="20" maxlength="30"></p>
+							
+							<!-- min e max definem, respectivamente, os valores mínimo e máximo aceitos em tipos compatíveis, como "number" e "date". -->
 							<p><label for="atributo-min-max">min e max:</label> <input type="number" id="atributo-min-max" name="idade" min="0" max="120"></p>
+							
+							<!-- multiple permite vários valores em tipos compatíveis, como "email" e "file". placeholder exibe uma dica dentro do campo enquanto ele está vazio; não substitui um rótulo. -->
 							<p><label for="atributo-multiple">multiple (e-mail):</label> <input type="email" id="atributo-multiple" name="emails" multiple placeholder="email1@exemplo.com, email2@exemplo.com"></p>
+							
+							<!-- placeholder exibe uma dica dentro do campo enquanto ele está vazio; não substitui um rótulo. -->
 							<p><label for="atributo-placeholder">placeholder:</label> <input type="text" id="atributo-placeholder" name="dica" placeholder="Digite um texto"></p>
+							
+							<!-- required torna obrigatório o preenchimento do campo antes do envio. -->
 							<p><label for="atributo-required">required:</label> <input type="text" id="atributo-required" name="obrigatorio" required></p>
+							
+							<!-- autofocus solicita que o campo receba o foco automaticamente ao abrir a página. -->
 							<p><label for="atributo-autofocus">autofocus:</label> <input type="text" id="atributo-autofocus" name="foco" autofocus> <em>(não vai aparecer com foco pois é necessário clicar no</em> <span class="code reserved-keyword">details</span> <em>para que esse campo apareça nesta página)</em></p>
+							
+							<!-- autocomplete orienta o navegador sobre preencher um campo automaticamente, por exemplo, com "email" ou "off". -->
 							<p><label for="atributo-autocomplete">autocomplete:</label> <input type="email" id="atributo-autocomplete" name="contato" autocomplete="email"></p>
-							<p><button type="submit">Enviar demonstração</button></p>
+							<p><button type="submit">Testar envio</button></p>
 						</form>
 					</details>
 				</li>
@@ -243,6 +263,19 @@
 		</article>
 	</main>
 
-	<footer><!-- ... --></footer>
+	<aside>
+		<h2>Referências</h2>
+		<p>As informações aqui presentes foram obtidas por meio de:</p>
+		<ul>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input">Mozilla MDN</a></li>
+			<li><a href="https://www.w3schools.com/html/default.asp">W3Schools</a></li>
+		</ul>
+	</aside>
+
+	<footer>
+		<br>
+		<img src="img/logo-IFPR.png" alt="Logotipo do Instituto Federal do Paraná - Campus Capanema" width="150">
+		<p>&copy; Mateus Hirt - 2026</p>
+	</footer>
 </body>
 </html>

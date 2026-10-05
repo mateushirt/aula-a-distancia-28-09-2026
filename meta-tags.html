@@ -18,7 +18,7 @@
 </head>
 <body>
 	<header>
-		<h1>Aula à Distância (28/08/2026) - Meta Tags, Elementos e Atributos HTML</h1>
+		<h1>Aula à Distância (28/09/2026) - Meta Tags, Elementos e Atributos HTML</h1>
 		
 		<nav>
 			<a href="index.html">Página inicial</a>
@@ -34,10 +34,10 @@
 			<ul>
 				<li>
 					<details open>
-						<!-- Charset serve para definir como os caracteres serão exibidos na tela -->
-						<!-- Indica a codificação, a forma que os caracteres da página serão convertidos e entendidos pelo navegador para que possam ser exibidos na tela. Existem diferentes tipos de codificação de caracteres. Alguns exemplos são o UTF-8, o ISO-8859-1 e o Windows-1252. -->
+						<!-- Charset serve para definir como os caracteres serão interpretados pelo navegador -->
+						<!-- Indica a codificação, a forma que os caracteres da página serão convertidos e entendidos pelo navegador. Serve para dizer ao navegador a forma que deve interpretar os bytes do arquivo para "virarem" caracteres. Existem diferentes tipos de codificação de caracteres, sendo alguns exemplos: o UTF-8, o ISO-8859-1 e o Windows-1252. -->
 						<summary>Charset</summary>
-						<p>Indica a codificação, a forma que os caracteres da página serão convertidos e entendidos pelo navegador para que possam ser exibidos na tela. Existem diferentes tipos de codificação de caracteres. Alguns exemplos são o UTF-8, o ISO-8859-1 e o Windows-1252.</p>
+						<p>Indica a codificação, a forma que os caracteres da página serão convertidos e entendidos pelo navegador. Serve para dizer ao navegador a forma que deve interpretar os bytes do arquivo para "virarem" caracteres. Existem diferentes tipos de codificação de caracteres, sendo alguns exemplos: o UTF-8, o ISO-8859-1 e o Windows-1252.</p>
 						<p><b>Exemplo:</b> No código <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">charset</span>=<span class="code text-string">"UTF-8"</span>&gt;</code>, é definido que a codificação da página será em UTF-8.</p>
 					</details>
 				</li>
@@ -79,7 +79,7 @@
 
 			<ul>
 				<li>
-					<details open>
+					<details>
 						<!-- Open Graph Title define qual será o título da página quando estiver sendo citada por outro aplicativo -->
 						<!-- Define o que terá no campo de título quando a página é mencionada por outro aplicativo (como uma rede social). -->
 						<summary>Open Graph: Title</summary>
@@ -124,20 +124,20 @@
 		</article>
 		
 		<article>
-			<h2>Outras <i lang="en">meta tags</i> utilizadas no <code><span class="code reserved-keyword">head</span></code> do HTML (+ ícone)</h2>
+			<h2>Outras <i lang="en">meta tags</i> utilizadas no <code><span class="code reserved-keyword">head</span></code> do HTML (+ CSP e ícone)</h2>
 
 			<ul>
 				<li>
-					<details open>
+					<details>
 						<!-- Define o que da URL será compartilhado com outro documento -->
 						<!-- Controla o conteúdo do header HTTP com um HTTP referer anexado a qualquer pedido que o documento enviar. Seu conteúdo define o quanto da URL do documento é compartilhada. -->
 						<summary>Referrer</summary>
 						<p>Controla o conteúdo do <i lang="en">header</i> HTTP com um HTTP <i lang="en">referer</i> anexado a qualquer pedido que o documento enviar. Seu conteúdo define o quanto da URL do documento é compartilhada.</p>
 						<p><b>Exemplos:</b></p>
-						<p>Considere a URL <a href="https://www.google.com/search?q=teste">https://www.google.com/search?q=teste</a>, sua "origem" será apenas <a href="https://www.google.com/search">https://www.google.com</a>, sem as demais informações da URL.</p>
+						<p>Considere a URL <a href="https://www.google.com/search?q=teste">https://www.google.com/search?q=teste</a>, sua "origem" será apenas <a href="https://www.google.com">https://www.google.com</a>, sem as demais informações da URL.</p>
 						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"referrer"</span> <span class="code attribute">content</span>=<span class="code text-string">"origin"</span>&gt;</code> apenas vai compartilhar a origem do documento.</p>
 						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"referrer"</span> <span class="code attribute">content</span>=<span class="code text-string">"no-referrer-when-downgrade"</span>&gt;</code> apenas vai compartilhar a URL se a segurança se manter ou for melhorada (https &rarr; https, http &rarr; http, http &rarr; https). Nas demais situações, não envia nenhum HTTP <i lang="en">referer</i>.</p>
-						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"referrer"</span> <span class="code attribute">content</span>=<span class="code text-string">"origin-when-crossorigin"</span>&gt;</code> envia a URL completa se a solicitação for da mesma origem, mas envia apenas a origem para os demais casos.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"referrer"</span> <span class="code attribute">content</span>=<span class="code text-string">"origin-when-cross-origin"</span>&gt;</code> envia a URL completa se a solicitação for da mesma origem, mas envia apenas a origem para os demais casos.</p>
 						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"referrer"</span> <span class="code attribute">content</span>=<span class="code text-string">"unsafe-URL"</span>&gt;</code> envia a URL completa.</p>
 						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"referrer"</span> <span class="code attribute">content</span>=<span class="code text-string">"no-referrer"</span>&gt;</code> não envia nenhum HTTP <i lang="en">referer</i>.</p>
 					</details>
@@ -219,7 +219,7 @@
 			</ul>
 		</article>
 	</main>
-	
+
 	<aside>
 		<h2>Referências</h2>
 		<p>As informações aqui presentes foram obtidas por meio de:</p>
@@ -231,6 +231,10 @@
 		</ul>
 	</aside>
 
-	<footer><!-- ... --></footer>
+	<footer>
+		<br>
+		<img src="img/logo-IFPR.png" alt="Logotipo do Instituto Federal do Paraná - Campus Capanema" width="150">
+		<p>&copy; Mateus Hirt - 2026</p>
+	</footer>
 </body>
 </html>
