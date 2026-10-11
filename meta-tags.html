@@ -28,6 +28,7 @@
 	</header>
 
 	<main>
+		<!-- Meta tags utilizadas no head do HTML -->
 		<article>
 			<h2><i lang="en">Meta tags</i> utilizadas no <code><span class="code reserved-keyword">head</span></code> do HTML</h2>
 
@@ -73,9 +74,13 @@
 				</li>
 			</ul>
 		</article>
-		
+		<!-- Propriedades Open Graph utilizadas no head do HTML -->
 		<article>
 			<h2>Propriedades Open Graph utilizadas no <code><span class="code reserved-keyword">head</span></code> do HTML</h2>
+			<p>O Open Graph é um protocolo de internet introduzido pelo Facebook para permitir integração fluida entre qualquer página <i lang="en">web</i> e plataformas de redes sociais. Adicionando <i lang="en">tags</i> <abbr title="Open Graph">OG</abbr> ao código HTML, é possível controlar exatamente como várias propriedades do site (como título, imagem, descrição) aparecem quando for compartilhado. Hoje, as maiores plataformas utilizam as <i lang="en">tags</i> OG para gerar prévias dos <i lang="en">links</i>.</p>
+
+			<img src="img/OG.jpg" alt="Print da rede social Discord mostrando como links aparecem" width="400">
+			<img src="img/OG_code.jpg" alt="Print das ferramentas de desenvolvedor (F12) mostrando a posição das propriedades Open Graph diretamente no código da página" width="500">
 
 			<ul>
 				<li>
@@ -118,11 +123,8 @@
 					</details>
 				</li>
 			</ul>
-
-			<img src="img/OG.jpg" alt="Print da rede social Discord mostrando como links aparecem" width="400">
-			<img src="img/OG_code.jpg" alt="Print das ferramentas de desenvolvedor (F12) mostrando a posição das propriedades Open Graph diretamente no código da página" width="500">
 		</article>
-		
+		<!-- Outras meta tags utilizadas no head do HTML (+ CSP e ícone) -->
 		<article>
 			<h2>Outras <i lang="en">meta tags</i> utilizadas no <code><span class="code reserved-keyword">head</span></code> do HTML (+ CSP e ícone)</h2>
 
@@ -147,7 +149,7 @@
 					<details>
 						<!-- Estabelece as origens de informação que o documento pode aceitar. -->
 						<!-- Trata-se de uma camada de segurança a mais para o documento, facilitando a detecção e mitigação de determinados tipos de ataque. Ela estabelece uma listagem de origens de informação permitidas. -->
-						<summary>Content Security Policy</summary>
+						<summary><i lang="en">Content Security Policy</i> (CSP)</summary>
 						<p>Trata-se de uma camada de segurança a mais para o documento, facilitando a detecção e mitigação de determinados tipos de ataque. Ela estabelece uma listagem de origens de informação permitidas.</p>
 						<p>Utiliza <code class="code attribute">http-equiv</code> ao invés de <code class="code attribute">name</code> pois simula cabeçalhos HTTP diretamente no código da página.</p>
 						<p><b>Exemplo:</b> O código <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">http-equiv</span>=<span class="code text-string">"Content-Security-Policy"</span> <span class="code attribute">content</span>=<span class="code text-string">"default-src 'self'; img-src https://*"</span>&gt;</code> estabelece que todo conteúdo deve vir da mesma origem (<code class="code text-string">"default-src 'self'"</code>) e que suas imagens devem vir de sites https (<code class="code text-string">"img-src https://*"</code>).</p>
@@ -224,10 +226,11 @@
 		<h2>Referências</h2>
 		<p>As informações aqui presentes foram obtidas por meio de:</p>
 		<ul>
-			<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta">Mozilla MDN</a></li>
-			<li><a href="https://www.w3schools.com/html/default.asp">W3Schools</a></li>
-			<li><a href="https://developers.google.com/search/docs/appearance/snippet?hl=pt-br">Google Search Central</a></li>
-			<li><a href="https://medium.com/geekculture/open-graph-tags-in-html-101-5d470bbdb78a">Medium</a></li>
+			<li><a class="external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta">Mozilla MDN</a></li>
+			<li><a class="external" href="https://www.w3schools.com/html/default.asp">W3Schools</a></li>
+			<li><a class="external" href="https://developers.google.com/search/docs/appearance/snippet?hl=pt-br">Google Search Central</a></li>
+			<li><a class="external" href="https://medium.com/geekculture/open-graph-tags-in-html-101-5d470bbdb78a">Medium</a></li>
+			<li><a class="external" href="https://www.opengraph.xyz/">OpenGraph</a></li>
 		</ul>
 	</aside>
 

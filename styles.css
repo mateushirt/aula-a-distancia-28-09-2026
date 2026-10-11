@@ -1,21 +1,100 @@
 :root {
 	font-family: Arial, sans-serif;
+
+	& * {
+		box-sizing: border-box;
+	}
 }
 
 article {
-	max-width: 1000px;
-	background-color: azure;
-	padding: 10px;
 	margin-bottom: 5px;
+	max-width: 1000px;
+	padding: 10px;
 }
+
+nav:not(#index-nav) a, nav:not(#index-nav) * a {
+	background-color: #222;
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 5px 8px;
+	color: #fff;
+	
+
+	&:hover {
+		background-color: #333;
+		cursor: pointer;
+		color: #ddd;
+	}
+}
+
+
+nav#index-nav ul li {
+	display: inline-block;
+	background-color: #1B1B27;
+	border-radius: 10px;
+	margin-right: 45px;
+	text-align: center;
+	padding: 5px;
+
+	& img {
+		display: block;
+		border-radius: 10px;
+	}
+
+	& a {
+		color: white;
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	&:hover {
+		background-color: #222;
+		cursor: pointer;
+	}
+}
+
+footer {
+	background-color: whitesmoke;
+	border-top: 2px solid #333;
+	margin-top: 20px;
+}
+
+details summary {
+	padding: 5px 13px 5px 10px;
+	background-color: #222;
+	border-radius: 5px;
+	width: fit-content;
+	color: #fff;
+
+	&:not(:last-child) {	
+		margin-bottom: 2px;
+	}
+
+	&:hover {
+		background-color: #333;
+		cursor: pointer;
+		color: #ddd;
+	}
+}
+
+ul li {
+	margin-left: -40px;
+	list-style: none;
+}
+
+a.external::after {
+	content: '↗';
+	font-size: 8pt;
+}
+
 
 /* Tentando imitar o tema Tokyo Night */
 code {
 	background-color: #1A1B26;
-	color: #89DDFF;
 	padding: 1px 6px 2px 6px;
-	border-radius: 4px;
 	font-weight: normal;
+	border-radius: 4px;
+	color: #89DDFF;
 }
 
 .code {
