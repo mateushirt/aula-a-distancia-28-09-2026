@@ -34,7 +34,7 @@
 
 			<ul>
 				<li>
-					<details open>
+					<details>
 						<!-- Charset serve para definir como os caracteres serão interpretados pelo navegador -->
 						<!-- Indica a codificação, a forma que os caracteres da página serão convertidos e entendidos pelo navegador. Serve para dizer ao navegador a forma que deve interpretar os bytes do arquivo para "virarem" caracteres. Existem diferentes tipos de codificação de caracteres, sendo alguns exemplos: o UTF-8, o ISO-8859-1 e o Windows-1252. -->
 						<summary>Charset</summary>
@@ -169,8 +169,8 @@
 						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"nofollow"</span>&gt;</code> pede aos robôs para não seguir os links da página.</p>
 						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"all"</span>&gt;</code> equivale ao <code class="code text-string">"index"</code> e <code class="code text-string">"follow"</code> juntos.</p>
 						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"none"</span>&gt;</code> equivale ao <code class="code text-string">"noindex"</code> e <code class="code text-string">"nofollow"</code> juntos.</p>
-						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"noarchive"</span>&gt;</code> pede aos robôs para não armazenar a página em <i lang="en">cache</i>. Também pode ser substituído por <code class="code text-string">"nocache"</code>.</p>
-						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"nosnippet"</span>&gt;</code> previne que quaisquer descrições da página apareça em resultados de ferramentas de pesquisa.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"noarchive"</span>&gt;</code> pede aos robôs para não armazenar a página em <i lang="en">cache</i>. No buscador Bing, também pode ser substituído por <code class="code text-string">"nocache"</code>.</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"nosnippet"</span>&gt;</code> previne que quaisquer descrições da página apareçam em resultados de ferramentas de pesquisa.</p>
 						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"robots"</span> <span class="code attribute">content</span>=<span class="code text-string">"noimageindex"</span>&gt;</code> pede para que o documento não seja referenciado quando uma imagem for indexada.</p>
 					</details>
 				</li>
@@ -180,7 +180,7 @@
 						<!-- Define palavras-chave para mecanismos de pesquisa. -->
 						<!-- Define palavras-chave para mecanismos de pesquisa. -->
 						<summary>Keywords</summary>
-						<p>Define palavras-chave para mecanismos de pesquisa.</p>
+						<p>Define palavras-chave para mecanismos de pesquisa. Com o tempo, tem sido menos utilizada pelos buscadores, a exemplo do Google que deixou de utilizá-la.</p>
 						<p><b>Exemplo:</b> <code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"keywords"</span> <span class="code attribute">content</span>=<span class="code text-string">"Tags HTML, meta, cabeçalho"</span>&gt;</code></p>
 					</details>
 				</li>
@@ -204,7 +204,7 @@
 						<p><b>Exemplos:</b></p>
 						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"color-scheme"</span> <span class="code attribute">content</span>=<span class="code text-string">"normal"</span>&gt;</code> indica que não há conhecimento da existência de esquemas de cor, e que então deve ser utilizado o esquema padrão.</p>
 						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"color-scheme"</span> <span class="code attribute">content</span>=<span class="code text-string">"light"</span>&gt;</code> indica que aquele documento suporta o esquema claro (se informado <code class="code text-string">"dark"</code>, indica que suporta o esquema escuro). Caso constem dois nomes (<code class="code text-string">"light dark"</code>/<code class="code text-string">"dark light"</code>), indica que ambos os esquemas são suportados, mas que preferencialmente deve-se utilizar o primeiro.</p>
-						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"color-scheme"</span> <span class="code attribute">content</span>=<span class="code text-string">"only light"</span>&gt;</code> indica que aquele documento suporta apenas o esquema claro. O <code class="code text-string">"only dark"</code> é inválido, pois forçar um equema escuro quando o navegar não o suporta pode ocasionar problemas de leitura do conteúdo (todos os maiores navegadores suportam o esquema claro).</p>
+						<p><code>&lt;<span class="code reserved-keyword">meta</span> <span class="code attribute">name</span>=<span class="code text-string">"color-scheme"</span> <span class="code attribute">content</span>=<span class="code text-string">"only light"</span>&gt;</code> indica que aquele documento suporta apenas o esquema claro. O <code class="code text-string">"only dark"</code> é inválido, pois forçar um esquema escuro quando o navegador não o suporta pode ocasionar problemas de leitura do conteúdo (todos os maiores navegadores suportam o esquema claro).</p>
 					</details>
 				</li>
 
@@ -229,6 +229,7 @@
 			<li><a class="external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta">Mozilla MDN</a></li>
 			<li><a class="external" href="https://www.w3schools.com/html/default.asp">W3Schools</a></li>
 			<li><a class="external" href="https://developers.google.com/search/docs/appearance/snippet?hl=pt-br">Google Search Central</a></li>
+			<li><a class="external" href="https://developers.google.com/search/blog/2009/09/google-does-not-use-keywords-meta-tag?hl=pt-br">Google Search Central Blog</a></li>
 			<li><a class="external" href="https://medium.com/geekculture/open-graph-tags-in-html-101-5d470bbdb78a">Medium</a></li>
 			<li><a class="external" href="https://www.opengraph.xyz/">OpenGraph</a></li>
 		</ul>
